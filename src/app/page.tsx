@@ -14,6 +14,7 @@ export default function Home() {
   const { state, dispatch } = useCart();
   const [activeItem, setActiveItem] = useState<string>("Marketplace");
   const [cartIsOpen, setCartIsOpen] = useState<boolean>(false);
+  const [walletIsConnected, setWalletIsConnected] = useState<boolean>(false);
 
   const [itemToAdd, setItemToAdd] = useState<CartItem | null>(null);
 
@@ -23,10 +24,19 @@ export default function Home() {
   const toogleCart = () => {
     setCartIsOpen((prev) => !prev);
   };
+  const toogleConnectWallet = () => {
+    setWalletIsConnected((prev) => !prev);
+  };
   const onClickNft = (item: CartItem) => {
     setItemToAdd(item);
   };
   const addItemToCart = () => {
+    if (!walletIsConnected) {
+      alert(
+        "You need to link your BitCoin Wallet before you can start purchasing NFTs"
+      );
+      return;
+    }
     if (itemToAdd) {
       dispatch({ type: "ADD_ITEM", payload: itemToAdd });
       setItemToAdd(null);
@@ -41,7 +51,12 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Header activeItem={activeItem} toogleCart={toogleCart} />
+      <Header
+        activeItem={activeItem}
+        toogleCart={toogleCart}
+        toogleConnectWallet={toogleConnectWallet}
+        walletIsConnected={walletIsConnected}
+      />
       <LeftMenu activeItem={activeItem} handleMenuClick={handleMenuClick} />
       <SelectedMenu
         activeItem={activeItem}
