@@ -36,6 +36,11 @@ export interface MenuItemType {
   isLogout?: boolean;
 }
 
+export interface Props {
+  activeItem: string;
+  handleMenuClick: (activeItem: string) => void;
+}
+
 export const menuItems: MenuItemType[] = [
   { name: "Dashboard", icon: faThLarge, hasLightBackgroundColor: true },
   {
