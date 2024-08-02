@@ -1,12 +1,9 @@
-// constants/MenuItems.ts
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import {
   faThLarge,
   faWallet,
-  faBoxOpen,
   faCoins,
   faFileInvoiceDollar,
-  faFileContract,
   faCog,
   faCheckSquare,
   faStore,
@@ -14,13 +11,11 @@ import {
   faReceipt,
   faGift,
   faChartPie,
-  faMoneyBillWave,
   faSeedling,
   faChartLine,
   faUsers,
   faTrophy,
   faTools,
-  faStar,
   faNewspaper,
   faHeadset,
   faSignOutAlt,
