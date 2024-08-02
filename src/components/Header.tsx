@@ -9,14 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 interface HeaderProps {
-  isMobileMenOpen: boolean;
-  toogleMobileMenu: () => void;
+  activeItem: string;
 }
 
-const Header: React.FC<HeaderProps> = ({
-  isMobileMenOpen,
-  toogleMobileMenu,
-}) => {
+const Header: React.FC<HeaderProps> = ({ activeItem }) => {
   return (
     <div className={styles.container}>
       <div className={styles.logoContainer}>
@@ -35,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({
         />
       </div>
 
-      <div className={styles.headerTitle}>Marketplace</div>
+      <div className={styles.headerTitle}>{activeItem}</div>
       <div className={styles.connectButton}>Connect Wallet</div>
       <div className={`${styles.bellButton} ${styles.iconButton}`}>
         <FontAwesomeIcon
