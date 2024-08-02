@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NFT Marketplace
 
-## Getting Started
+NFT Marketplace is a demo website that demonstrates my ability to create a feature-rich website. The project uses React, Next.js, and TypeScript to create a fully responsive shop-like site for buying NFTs
 
-First, run the development server:
+# Features
+-Responsive design  
+-Products display  
+-Add to cart
+-Cart items counter  
+-Remove from cart  
+-Burger menu on mobile
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  
+## Screenshots
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Try the app yourself
+The website is hosted here: [https://motomarket-mulweli.netlify.app](https://motomarket-mulweli.netlify.app)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Building the project
 
-## Learn More
+To build the project on your local machine and run it on your device, follow these steps: 
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository to your local machine:
+    ```bash
+   git clone https://github.com/mulweli-mp/nft-marketplace.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+   cd nft-marketplace
+    ```
+3. Install the required dependencies:
+    ```bash
+   npm install
+    ```
+4. Run development Server:
+    ```bash
+   npm run dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  
