@@ -1,0 +1,159 @@
+.modalHeader {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: antiquewhite; */
+  padding: 0px 30px;
+  font-size: large;
+  font-weight: bold;
+}
+.balanceContainer {
+  height: 55px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #1e2225;
+  padding: 0px 10px;
+  align-self: center;
+  margin: 10px 0px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.itemsContainer {
+  min-height: 60px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: rgb(7, 82, 11); */
+  /* padding: 0px 40px; */
+  align-self: center;
+  overflow-y: auto;
+}
+.closeButton {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ff7800;
+  color: #ff7800;
+  border-radius: 15px;
+}
+
+.closeButton:hover {
+  background-color: #ff7800;
+  color: white;
+  cursor: pointer;
+}
+.totalsTable {
+  min-height: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  background-color: #1e2225;
+  padding: 10px;
+  margin: 10px 0px;
+  align-self: center;
+  border-radius: 5px;
+}
+.buttonsContainer {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* background-color: #ff7800; */
+}
+.actionButton {
+  height: 60%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ff7800;
+  font-size: small;
+  font-weight: bold;
+  color: #ff7800;
+}
+
+.actionButton:hover {
+  background-color: #ff7800;
+  color: white;
+  cursor: pointer;
+}
+
+.addAnother {
+  border: 2px solid #b4986b;
+  color: #b4986b;
+}
+
+.addAnother:hover {
+  background-color: #b4986b;
+  color: white;
+  cursor: pointer;
+}
+.subTotal {
+  color: #727272;
+  font-size: small;
+}
+.sats {
+  color: #ffffff;
+}
+.expectedTotalText {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: small;
+}
+.modalHeaderText {
+  color: #ffffff;
+  font-weight: bold;
+}
+.btc {
+  color: #ff7800;
+}
+
+.totalsRow {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #064a7e; */
+  /* margin-top: 7px; */
+}
+.explectedTotalContainer {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #064a7e; */
+  margin-top: 7px;
+  border-top: 0.5px grey solid;
+}
+.walletUnit {
+  height: 100%;
+  /* width: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* background-color: #064a7e; */
+  font-size: small;
+  flex: 1;
+  padding-left: 15px;
+}
