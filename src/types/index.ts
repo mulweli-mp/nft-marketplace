@@ -2,7 +2,13 @@ import React, { Dispatch } from "react";
 
 export interface CartItem {
   id: number;
-  name: string;
+  image: string;
+  background: string;
+  title: string;
+  date: string;
+  qty: number;
+  btcPrice: number;
+  usdPrice: number;
 }
 
 export interface CartState {
