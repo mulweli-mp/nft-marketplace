@@ -13,9 +13,14 @@ NFT Marketplace is a demo website that demonstrates my ability to create a featu
 
   
 ## Screenshots
+![screenshort 3](https://github.com/user-attachments/assets/76c7f72c-05bc-4d81-a386-f3c013acc8ae)
+![screenshort 2](https://github.com/user-attachments/assets/85d5b81a-0db8-47d0-928c-2e02e8e2b145)
+![screenshort 1](https://github.com/user-attachments/assets/faf89749-290f-4d52-b41b-38a3d8ac0dc9)
+
+
 
 ## Try the app yourself
-The website is hosted here: [https://motomarket-mulweli.netlify.app](https://motomarket-mulweli.netlify.app)
+The website is hosted here: [https://nft-marketplace-mulweli.netlify.app](https://nft-marketplace-mulweli.netlify.app)
 
 ## Building the project
 
