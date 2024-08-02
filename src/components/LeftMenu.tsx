@@ -1,15 +1,9 @@
 import React, { useState, useCallback } from "react";
 import styles from "./LeftMenu.module.css";
-import { menuItems, MenuItemType } from "@/constants/MenuItems";
+import { menuItems, MenuItemType, Props } from "@/constants/MenuItems";
 import MenuItem from "@/components/MenuItem";
 
-const LeftMenu: React.FC = () => {
-  const [activeItem, setActiveItem] = useState<string>("Marketplace");
-
-  const handleMenuClick = useCallback((item: string) => {
-    setActiveItem(item);
-  }, []);
-
+const LeftMenu: React.FC<Props> = ({ activeItem, handleMenuClick }) => {
   const renderMenuItem = (menuItem: MenuItemType) => (
     <MenuItem
       key={menuItem.name}

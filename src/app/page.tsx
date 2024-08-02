@@ -1,27 +1,24 @@
 "use client";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import LeftMenu from "@/components/LeftMenu";
 import BurgerMenu from "@/components/BurgerMenu";
 import SelectedMenu from "@/components/SelectedMenu";
 import Header from "@/components/Header";
 
 export default function Home() {
-  const [isMobileMenOpen, setIsMobileMenOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState<string>("Marketplace");
 
-  const toogleMobileMenu = (): void => {
-    setIsMobileMenOpen((prev) => !prev);
-  };
+  const handleMenuClick = useCallback((item: string) => {
+    setActiveItem(item);
+  }, []);
 
   return (
     <main className={styles.main}>
-      <Header
-        isMobileMenOpen={isMobileMenOpen}
-        toogleMobileMenu={toogleMobileMenu}
-      />
-      <LeftMenu />
-      <BurgerMenu />
-      <SelectedMenu />
+      <Header activeItem={activeItem} />
+      <LeftMenu activeItem={activeItem} handleMenuClick={handleMenuClick} />
+      <SelectedMenu activeItem={activeItem} />
+      <BurgerMenu activeItem={activeItem} handleMenuClick={handleMenuClick} />
     </main>
   );
 }
