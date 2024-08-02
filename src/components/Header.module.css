@@ -50,7 +50,58 @@
   font-size: smaller;
   font-weight: 500;
 }
+.disConnectButton {
+  height: 55%;
+  /* background-color: #ff7800; */
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  border: grey 1px solid;
+  border-radius: 20px;
+  font-size: smaller;
+  font-weight: 500;
+  flex-direction: row;
+  padding: 0 9px;
+}
 
+.disConnectButton:hover {
+  cursor: pointer;
+}
+
+.walletContainer {
+  height: 70%;
+  /* background-color: #ff7800; */
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  color: grey;
+  border: grey 1px solid;
+  border-radius: 20px;
+  font-size: smaller;
+  font-weight: 500;
+  flex-direction: row;
+  margin-left: 5px;
+  padding: 0 5px;
+}
+.orangeCircle {
+  height: 20px;
+  background-color: #ff7800;
+  width: 20px;
+  border-radius: 20px;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.btc {
+  margin-left: 7px;
+}
+.walletText {
+  margin-left: 5px;
+  font-size: x-small;
+}
 .connectButton:hover {
   cursor: pointer;
   background-color: #ff7800;
@@ -115,6 +166,9 @@
     display: none;
   }
   .iconButton.bellButton {
+    display: none;
+  }
+  .walletContainer {
     display: none;
   }
 

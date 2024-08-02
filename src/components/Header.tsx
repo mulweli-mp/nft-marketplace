@@ -12,9 +12,16 @@ import { useCart } from "@/context/CartContext";
 interface HeaderProps {
   activeItem: string;
   toogleCart: () => void;
+  toogleConnectWallet: () => void;
+  walletIsConnected: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ activeItem, toogleCart }) => {
+const Header: React.FC<HeaderProps> = ({
+  activeItem,
+  toogleCart,
+  toogleConnectWallet,
+  walletIsConnected,
+}) => {
   const { state, dispatch } = useCart();
 
   return (
@@ -32,7 +39,25 @@ const Header: React.FC<HeaderProps> = ({ activeItem, toogleCart }) => {
       </div>
 
       <div className={styles.headerTitle}>{activeItem}</div>
-      <div className={styles.connectButton}>Connect Wallet</div>
+      {walletIsConnected ? (
+        <div onClick={toogleConnectWallet} className={styles.disConnectButton}>
+          <Image
+            src={`/bitcoin-logo.png`}
+            width={25}
+            height={25}
+            alt={`bitcoin-logo`}
+          />
+          <p className={styles.btc}>0.012 BTC</p>
+          <div className={styles.walletContainer}>
+            <div className={styles.orangeCircle} />
+            xfs..fas
+          </div>
+        </div>
+      ) : (
+        <div onClick={toogleConnectWallet} className={styles.connectButton}>
+          Connect Wallet
+        </div>
+      )}
       <div className={`${styles.bellButton} ${styles.iconButton}`}>
         <FontAwesomeIcon icon={faBell} size="lg" />
       </div>
