@@ -1,24 +1,16 @@
 import React from "react";
 import styles from "./CardNFT.module.css";
 import Image from "next/image";
+import { CartItem } from "@/types/index";
 
-interface CardNFTType {
-  id: number;
-  image: string;
-  background: string;
-  title: string;
-  date: string;
-  qty: number;
-  btcPrice: number;
-  usdPrice: number;
-}
 interface Props {
-  listing: CardNFTType;
+  listing: CartItem;
+  onClickNft: (item: CartItem) => void;
 }
 
-const CardNFT: React.FC<Props> = ({ listing }) => {
+const CardNFT: React.FC<Props> = ({ listing, onClickNft }) => {
   return (
-    <div className={styles.card}>
+    <div onClick={() => onClickNft(listing)} className={styles.card}>
       <div className={styles.backgroundImage}>
         <div className={styles.amountContainer}>
           <div className={styles.price}>

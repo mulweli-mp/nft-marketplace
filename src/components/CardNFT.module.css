@@ -8,6 +8,7 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  align-self: center;
 }
 
 @media (max-width: 500px) {
