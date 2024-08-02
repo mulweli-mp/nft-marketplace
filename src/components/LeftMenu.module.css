@@ -1,0 +1,50 @@
+/* LeftMenu.module.css */
+.container {
+  width: 320px;
+  background-color: #111214;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.optionContainer {
+  padding: 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.optionContainer:hover {
+  background-color: #333;
+}
+
+.optionContainer.active {
+  color: #ff7800;
+}
+.optionContainer.lightBackgroundColor {
+  background-color: #1c1c1c;
+}
+.optionContainer.borderBottom {
+  border-bottom: #444 1px solid;
+}
+.optionContainer.logOutButtonStyle {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 20px;
+  /* color: rgba(255, 255, 255, 0.7); */
+}
+.arrowDownIcon {
+  position: absolute;
+  left: 285px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: none;
+  }
+}
