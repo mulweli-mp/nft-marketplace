@@ -22,7 +22,6 @@
   left: -290px;
   width: 290px;
   height: 100vh;
-  background-color: #1c1c1c;
   overflow: hidden;
   transition: left 0.3s ease;
   z-index: 30;
