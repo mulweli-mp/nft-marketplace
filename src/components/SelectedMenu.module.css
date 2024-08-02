@@ -7,3 +7,19 @@
   min-height: 100px;
   overflow-y: hidden;
 }
+
+.modalContainer {
+  background-color: #d3047d;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 250px;
+  position: sticky;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
