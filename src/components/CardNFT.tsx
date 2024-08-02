@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./CardNFT.module.css";
 import Image from "next/image";
 import { CartItem } from "@/types/index";
+import { useCart } from "@/context/CartContext";
 
 interface Props {
   listing: CartItem;
@@ -9,6 +10,10 @@ interface Props {
 }
 
 const CardNFT: React.FC<Props> = ({ listing, onClickNft }) => {
+  const { state, dispatch } = useCart();
+  const itemIsOnCart = (array: CartItem[], id: number | undefined): boolean => {
+    return array.some((item) => item.id === id);
+  };
   return (
     <div onClick={() => onClickNft(listing)} className={styles.card}>
       <div className={styles.backgroundImage}>
@@ -19,6 +24,9 @@ const CardNFT: React.FC<Props> = ({ listing, onClickNft }) => {
           <div className={styles.price}>${listing.usdPrice}</div>
         </div>
         <div className={styles.inGameText}>IN-GAME</div>
+        {itemIsOnCart(state.items, listing?.id) && (
+          <div className={styles.onCartOverlay}>🛒On Your Cart </div>
+        )}
         <Image
           src={listing.background}
           width={300}
