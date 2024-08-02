@@ -7,12 +7,16 @@ import {
   faBell,
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
+import { useCart } from "@/context/CartContext";
 
 interface HeaderProps {
   activeItem: string;
+  toogleCart: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ activeItem }) => {
+const Header: React.FC<HeaderProps> = ({ activeItem, toogleCart }) => {
+  const { state, dispatch } = useCart();
+
   return (
     <div className={styles.container}>
       <div className={styles.logoContainer}>
@@ -24,28 +28,17 @@ const Header: React.FC<HeaderProps> = ({ activeItem }) => {
         />
       </div>
       <div className={styles.backButton}>
-        <FontAwesomeIcon
-          icon={faArrowLeft}
-          className={styles.arrowDownIcon}
-          size="lg"
-        />
+        <FontAwesomeIcon icon={faArrowLeft} size="lg" />
       </div>
 
       <div className={styles.headerTitle}>{activeItem}</div>
       <div className={styles.connectButton}>Connect Wallet</div>
       <div className={`${styles.bellButton} ${styles.iconButton}`}>
-        <FontAwesomeIcon
-          icon={faBell}
-          className={styles.arrowDownIcon}
-          size="lg"
-        />
+        <FontAwesomeIcon icon={faBell} size="lg" />
       </div>
-      <div className={`${styles.iconButton}`}>
-        <FontAwesomeIcon
-          icon={faShoppingCart}
-          className={styles.arrowDownIcon}
-          size="lg"
-        />
+      <div onClick={toogleCart} className={`${styles.iconButton}`}>
+        <div className={styles.cartCounter}>{state.items.length}</div>
+        <FontAwesomeIcon icon={faShoppingCart} size="lg" />
       </div>
       <div className={styles.profileImage}>
         <Image
